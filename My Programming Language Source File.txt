@@ -1,0 +1,40 @@
+let Number: DataType = [Integer, Decimal]
+
+begin function add(a: Integer, b: Integer) -> Integer:
+    return a + b
+end function
+
+
+begin function subtract(a: Integer, b: Integer) -> Integer:
+    return a - b
+end function
+
+
+begin function multiply(a: Integer, b: [Integer, Decimal]) -> Auto:
+    return a * b
+end function
+
+
+begin function divide(a: Decimal, b: Decimal = 1.0) -> Optional[Decimal]:
+    begin if b != 0:
+        return a / b
+    else:
+        return None
+    end if
+end function
+
+op_name: String = input("Enter the operation name: ")
+first_num: Number = input("Enter first number: ")
+second_num: Number = input("Enter second number: ")
+
+begin if op_name == "add":
+    print("Sum:", add(a, b))
+elif op_name == "subtract":
+    print("Difference:", subtract(a, b))
+elif op_name == "multiply":
+    print("Product:", multiply(a, b))
+elif op_name == "divide":
+    print("Quotient:", divide(a, b))
+else:
+    print("Invalid operation!")
+endif
