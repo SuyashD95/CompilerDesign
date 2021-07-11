@@ -1,0 +1,29 @@
+# Initialization
+# --------------
+n = 5
+p = 1
+x = 4
+string = "This is a string!"
+# --------------
+
+# Loop
+# ----
+begin loop n > 0 do
+  p = p * n
+  n = n - 1
+end loop
+# ----
+
+# If-else 
+# -------
+if x == 1 then 
+  y = 2 
+else 
+  y = 3
+end if
+# -------
+
+# Arithmetic Expression
+# ---------------------
+x = y + n * 2
+# ---------------------
